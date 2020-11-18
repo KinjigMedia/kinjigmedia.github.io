@@ -1,7 +1,224 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+/* original dimensions: width:400px; height:225px; */
+
+/* alt dimensions: width:300px; height:168.75px; */
+
+/* alt dimensions: width:350px; height:196.875px; */
+
+iframe.vid {
+  scrolling:no;
+  width:300px;
+  height:168.75px;
+  border: none;
+  display: block;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: left;
+}
+
+p.title {
+  vertical-align: baseline;
+  font-family: Arial;
+  display: block;
+  font-size: 1.5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+
+p.desc {
+  vertical-align: baseline;
+  font-family: Arial;
+  display: block;
+  font-size: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  width:300px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: black;
+
+</style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+<script>
+function show_iframe1() {
+$("#1").html(
+"<iframe class=\"vid\" src='https://www.youtube.com/embed/5_-O7h9eSbE?autoplay=1&modestbranding=0&rel=0' allowfullscreen=\"allowfullscreen\"></iframe>");
+}
+
+function show_iframe2() {
+$("#2").html(
+"<iframe class=\"vid\" src='https://www.youtube.com/embed/Yhozn4StuYc?autoplay=1&modestbranding=0&rel=0' allowfullscreen=\"allowfullscreen\"></iframe>");
+}
+
+function show_iframe3() {
+$("#3").html(
+"<iframe class=\"vid\" src='https://www.youtube.com/embed/YLEvTMmKOgQ?autoplay=1&modestbranding=0&rel=0' allowfullscreen=\"allowfullscreen\"></iframe>");
+}
+
+function show_iframe4() {
+$("#4").html(
+"<iframe class=\"vid\" src='https://www.youtube.com/embed/bmeiFcmqJvw?autoplay=1&modestbranding=0&rel=0' allowfullscreen=\"allowfullscreen\"></iframe>");
+}
+</script>             
+
+<div class="flex-container">
+
+<div>
+<p class="title">
+<a href="https://youtu.be/5_-O7h9eSbE">
+S01E01 - Pilot
+</a></p>
+
+<div id="1">
+
+<div class="container">
+<img
+style="display: block; margin-left: auto; margin-right:auto; width:300px"
+src="https://image.tmdb.org/t/p/original/kh5bYKdm2B1jktZ77YbTajuSy9Q.jpg">
+<button class="btn" onclick="show_iframe1(); return false">Play</button>
+</div>
+</div> 
+
+<p class="desc">
+Spencer ramps up his efforts to build a post football career in Miami. Charles copes with the realities of finding a new job, while Ricky must find a new home.
+</p>
+
+<p><br><p>
+
+</div>
+
+<div>
+<p class="title">
+<a href="https://youtu.be/Yhozn4StuYc">
+S01E02 - Raise Up
+</a></p>
+
+<div id="2">
+
+<div class="container">
+<img
+style="display: block; margin-left: auto; margin-right:auto; width:300px"
+src="https://image.tmdb.org/t/p/original/7sJ1RZHGrtG1obnLYjSPjhK2bZ4.jpg">
+<button class="btn" onclick="show_iframe2(); return false">Play</button>
+</div>
+</div> 
+
+<p class="desc">
+Spencer clashes with Reggie when he tries to sign Vernon as a client, while Jason works on a contract extension with Dallas. Charles begins to wonder if he retired too early. Ricky fails to connect with a new teammate.
+</p>
+
+<p><br><p>
+
+</div>
+
+<div>
+<p class="title">
+<a href="https://youtu.be/YLEvTMmKOgQ">
+S01E03 - Move the Chain
+</a></p>
+
+<div id="3">
+
+<div class="container">
+<img
+style="display: block; margin-left: auto; margin-right:auto; width:300px"
+src="https://image.tmdb.org/t/p/original/fsGu2Sm7dK8U9F3VMTiS0YVNz2y.jpg">
+<button class="btn" onclick="show_iframe3(); return false">Play</button>
+</div>
+</div> 
+
+<p class="desc">
+Spencer and Joe borrow a yacht for a lavish party to woo new clients, but Reggie relishes spoiling Spencer's hospitality every chance he gets, while Ricky discovers the real reason a new teammate isn't too fond of him.
+</p>
+
+<p><br><p>
+
+</div>
+
+<div>
+<p class="title">
+<a href="https://youtu.be/bmeiFcmqJvw"> 
+S01E04 - Heads Will Roll
+</a></p>
+
+<div id="4">
+
+<div class="container">
+<img
+style="display: block; margin-left: auto; margin-right:auto; width:300px"
+src="https://image.tmdb.org/t/p/original/kdlfLpqbGO5PUZgiiHZBrlxenIx.jpg">
+<button class="btn" onclick="show_iframe4(); return false">Play</button>
+</div>
+</div> 
+
+<p class="desc">
+Spencer sees a neurologist when Tracy threatens to go public with an unsavory story. Reggie blindsides Jason and Spencer with unrealistic expectations for Vernon's contract. Charles is flummoxed by texts from a woman he can't remember.
+</p>
+
+<p><br><p>
+
+</div>
+
+</div>
+
 </body>
 </html>
