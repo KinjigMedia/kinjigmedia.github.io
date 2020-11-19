@@ -28,7 +28,7 @@
 	  display: flex;
 	  flex-wrap: wrap;
 	  flex-direction: row;
-	  justify-content: space-around;
+	  justify-content: left;
 	  text-align: left;
 	}
 
@@ -101,6 +101,13 @@
 
 	}
 
+	img.season_poster {
+	  display: block;
+	  margin-left: auto;
+	  margin-right:auto;
+	  width:300px;
+	}
+
 	.container {
 	  position: relative;
 	  width: 100%;
@@ -112,18 +119,22 @@
 	  height: auto;
 	}
 
-	.container .btn {
+	.container .btn_play {
 	  all: unset;
 	  position: absolute;
 	  top: 50%;
 	  left: 50%;
 	  transform: translate(-50%, -50%);
 	  -ms-transform: translate(-50%, -50%);
-	  background-color: #f1f1f1;
+	  background-color: white;
+	  /*
+	  The pink colour is:;
+	  #f2849e
+	  */
 	  color: white;
 	  font-size: 16px;
-	  padding: 12px 24px;
-	  border: none;
+	  padding: 6px 18px;
+	  border: 0.1em solid black;
 	  cursor: pointer;
 	  border-radius: 5px;
 	  font-weight: bold;
@@ -131,12 +142,54 @@
 	  text-align: center;
 	}
 
+	.container .btn_main {
+	  all: unset;
+	  background-color: white;
+	  color: white;
+	  font-size: 16px;
+	  padding: 6px 18px;
+	  border: 0.1em solid black;
+	  cursor: pointer;
+	  border-radius: 5px;
+	  font-weight: bold;
+      letter-spacing: normal;
+	  text-align: center;
+	}
+
+	.container .btn_details {
+	  all: unset;
+	  background-color: white;
+	  color: white;
+	  font-size: 0.75em;
+	  padding: 6px 12px;
+	  border: 0.1em solid black;
+	  cursor: pointer;
+	  border-radius: 5px;
+	  font-weight: bold;
+      letter-spacing: normal;
+	  text-align: left;
+	  margin-left: 1em;
+	  margin-right: 1em;
+	  margin-top: 1em;
+ 	  margin-bottom: 1em;
+
+	}
+
+
 	.unset {
 		all: unset;
 	}
 
-	.container .btn:hover {
+	.container .btn_play:hover {
 	  background-color: black;
+	}
+
+	.container .btn_main:hover {
+	  background-color: black;
+	}
+	.container .btn_details:hover {
+	  background-color: black;
+	}
 
 
 	</style>
@@ -202,21 +255,106 @@
 							<h2>Overview</h2>							
 							<p>Looking at the lives of former and current football players, the show follows former superstar Spencer Strasmore as he gets his life on track in retirement while mentoring other current and former players through the daily grind of the business of football.</p>
 							<p><a href="https://trakt.tv/shows/ballers">Trakt</a>/<a href="https://www.themoviedb.org/tv/62704-ballers">TMDb</a></p>
-							<h2>Seasons</h2>
-							<p class="unset">
-							TBD
-							<p><br></p>
 
+							<h2>Seasons</h2>
+
+							<div class="container">										
+							<button class="btn_main" onclick="show_all_seasons(); return false">Toggle All Seasons</button>
+							</div>
+
+							<div id="all_seasons" class="flex-container">
+
+							<div>
+							<p class="title">
+							<!-- Link to webpage for S01 -->
+							<a href="https://youtu.be/5_-O7h9eSbE">
+							S01
+							</a></p>
+							<a href="https://image.tmdb.org/t/p/original/26WcW5oB82yGRCd8I75QyXMbbBP.jpg">
+							<img class="season_poster"
+							src="https://image.tmdb.org/t/p/original/xIlXtQapjmBP04udmi4Ch6RDbJw.jpg"
+							>
+							</a>
+
+							<p class="desc">
+							<b>Overview:</b><br>
+							Season 1 follows various past and present football players as they navigate life off the field. Leading the pack is Spencer, a retired superstar who is trying to find a foothold as a financial manager to current players. Within his inner circle are talented but volatile wide receiver Charles; a reluctantly retired lineman struggling to adjust to life after the game; and rookie sensation Vernon, who lands himself in hot financial water.
 							</p>
+							</div>
+
+							<div>
+							<p class="title">
+							<!-- Link to webpage for S01 -->
+							<a href="https://youtu.be/5_-O7h9eSbE">
+							S02
+							</a></p>
+							<a href="https://image.tmdb.org/t/p/original/26WcW5oB82yGRCd8I75QyXMbbBP.jpg">
+							<img class="season_poster"
+							src="https://image.tmdb.org/t/p/original/xr8DMnl0aZEaSziie9k8sQccXZ.jpg"
+							>
+							</a>
+
+							<p class="desc">
+							<b>Overview:</b><br>
+							In Season 2, things are more competitive and complicated than ever. Retired football star turned financial manager Spencer is forced to face demons from his past as he goes head-to-head with the biggest shark in the business, Andre Allen. Meanwhile, Spencer's closest friends and clients struggle to find their footing in a world where it's “go big” or go home.
+							</p>
+							</div>
+
+
+							<div>
+							<p class="title">
+							<!-- Link to webpage for S01 -->
+							<a href="https://youtu.be/5_-O7h9eSbE">
+							
+							S03
+							</a></p>
+							<!-- Link to webpage for S03 -->
+
+							<a href="https://image.tmdb.org/t/p/original/26WcW5oB82yGRCd8I75QyXMbbBP.jpg"><img class="season_poster"
+							src="https://image.tmdb.org/t/p/original/26WcW5oB82yGRCd8I75QyXMbbBP.jpg"
+							></a>
+							
+							<p class="desc">
+							<b>Overview:</b><br>
+							New City. Same Hustle. Back for their third season, Spencer Strassmore and the rest of the 'Ballers’ are ready to bring the heat beyond Miami.
+							</p>
+							</div>
+							
+							<div>
+							<p class="title">
+							<!-- Link to webpage for S01 -->
+							<a href="https://youtu.be/5_-O7h9eSbE">
+							
+							S04
+							</a></p>
+							<a href="https://image.tmdb.org/t/p/original/26WcW5oB82yGRCd8I75QyXMbbBP.jpg">
+							<img class="season_poster"
+							src="https://image.tmdb.org/t/p/original/48YJM1ecW0071RfvS4CAgl6Wxkq.jpg"
+							>
+							</a>
+							
+							<p class="desc">
+							<b>Overview:</b><br>
+							Spencer and Joe take their skills to Los Angeles as they look to expand their roster and horizons in the world of action sports.
+							</p>
+							</div>
+
+							</div>
+
 							<!--
 							original dimensions: width:400px; height:225px;
 							alt dimensions: width:300px; height:168.75px;
 							alt dimensions: width:350px; height:196.875px;
 
 							-->					
+							<div class="container">
+
 							<h2>All Episodes</h2>
 
-							<div class="flex-container">
+							<button class="btn_main" onclick="show_all_eps(); return false">Toggle All Episodes</button>
+							</div>
+
+							<div id="all_eps" class="flex-container" style="display:none">
 
 							<div>
 							<p class="title">
@@ -230,12 +368,36 @@
 							<img
 							style="display: block; margin-left: auto; margin-right:auto; width:300px"
 							src="https://image.tmdb.org/t/p/original/kh5bYKdm2B1jktZ77YbTajuSy9Q.jpg">
-							<button class="btn" onclick="show_iframe1(); return false">Play</button>
+							<button class="btn_play" onclick="show_iframe1(); return false">Play</button>
 							</div>
 							</div> 
 
 							<p class="desc">
+							<b>Overview:</b><br>
 							Spencer ramps up his efforts to build a post football career in Miami. Charles copes with the realities of finding a new job, while Ricky must find a new home.
+							</p>
+							
+							<div class="container">
+							<button class="btn_details" onclick="show_details(); return false">More Details</button>
+							</div>
+
+							<p class="desc" id="details" style="display:none">
+							<b>Release Date:</b>
+							June 21, 2015<br>
+							<b>Director(s): </b>
+							<a href="https://www.themoviedb.org/person/36602-peter-berg">Peter Berg</a><br>
+							<b>Writer(s): </b>	
+							<a href="https://www.themoviedb.org/person/183044-stephen-levinson">Stephen Levinson</a><br>
+							<b>Guest Star(s): </b>
+							<a href="https://www.themoviedb.org/person/183044-stephen-levinson">Testing J. Test</a><br>
+							<b>Runtime: </b>
+							30 Mins<br>
+							<b>Views: </b>
+							20 Views<br><br>
+							<b>Links: </b><a href="https://trakt.tv/shows/ballers/seasons/1/episodes/1">Trakt</a>/<a href="https://www.themoviedb.org/tv/62704-ballers/season/1/episode/1">TMDb</a><br>
+							<b>Add to Watched: </b>TEST<br>
+							<b>Add to Watchlist: </b>TEST<br>
+							<b>Add to Favourites: </b>TEST<br>
 							</p>
 
 							</div>
@@ -252,7 +414,7 @@
 							<img
 							style="display: block; margin-left: auto; margin-right:auto; width:300px"
 							src="https://image.tmdb.org/t/p/original/7sJ1RZHGrtG1obnLYjSPjhK2bZ4.jpg">
-							<button class="btn" onclick="show_iframe2(); return false">Play</button>
+							<button class="btn_play" onclick="show_iframe2(); return false">Play</button>
 							</div>
 							</div> 
 
@@ -274,14 +436,13 @@
 							<img
 							style="display: block; margin-left: auto; margin-right:auto; width:300px"
 							src="https://image.tmdb.org/t/p/original/fsGu2Sm7dK8U9F3VMTiS0YVNz2y.jpg">
-							<button class="btn" onclick="show_iframe3(); return false">Play</button>
+							<button class="btn_play" onclick="show_iframe3(); return false">Play</button>
 							</div>
 							</div> 
 
 							<p class="desc">
 							Spencer and Joe borrow a yacht for a lavish party to woo new clients, but Reggie relishes spoiling Spencer's hospitality every chance he gets, while Ricky discovers the real reason a new teammate isn't too fond of him.
 							</p>
-
 							</div>
 
 							<div>
@@ -296,7 +457,7 @@
 							<img
 							style="display: block; margin-left: auto; margin-right:auto; width:300px"
 							src="https://image.tmdb.org/t/p/original/kdlfLpqbGO5PUZgiiHZBrlxenIx.jpg">
-							<button class="btn" onclick="show_iframe4(); return false">Play</button>
+							<button class="btn_play" onclick="show_iframe4(); return false">Play</button>
 							</div>
 							</div> 
 
@@ -383,6 +544,34 @@
 			$("#4").html(
 			"<iframe class=\"vid\" src='https://www.youtube.com/embed/bmeiFcmqJvw?autoplay=1&modestbranding=0&rel=0' allowfullscreen=\"allowfullscreen\"></iframe>");
 			}
+			
+			function show_all_eps() {
+			  var x = document.getElementById("all_eps");
+			  if (x.style.display === "none") {
+			    x.style.display = "flex";
+			  } else {
+			    x.style.display = "none";
+			  }
+			}
+
+			function show_all_seasons() {
+			  var x = document.getElementById("all_seasons");
+			  if (x.style.display === "none") {
+			    x.style.display = "flex";
+			  } else {
+			    x.style.display = "none";
+			  }
+			}
+
+			function show_details() {
+			  var x = document.getElementById("details");
+			  if (x.style.display === "none") {
+			    x.style.display = "block";
+			  } else {
+			    x.style.display = "none";
+			  }
+			}
+
 			</script>             
 
 	</body>
